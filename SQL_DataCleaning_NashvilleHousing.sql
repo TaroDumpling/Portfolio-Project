@@ -140,7 +140,7 @@ DELETE
 From RowNumCTE
 Where Row_Num > 1
 
--- DELETE UNUSED COLUMNS
+-- DELETE UNUSED COLUMNS : I know it's not a standard practice to delete data, this is just to show I can do this if needed.
 
 ALTER TABLE PortfolioProject.dbo.NashvilleHousing
 DROP COLUMN OwnerAddress, TaxDistrict, PropertyAddress
