@@ -8,7 +8,6 @@ select *
 From dbo.HousingNewYorkUnitsByBuild
 order by ProjectID
 
---Removed the Space in between column names such as Project Name, Project Start Date, etc by going to object explorer and rename each individual columns with right click. This helps efficiency when doing the data cleaning, so I don't have to type space key and [] every time.
 
 --Standardize Date Format
 
