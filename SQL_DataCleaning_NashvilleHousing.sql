@@ -1,4 +1,4 @@
--- All the credit of this DataCleaning goes toward Alex The Analyst on Youtube, I just follow along with his data cleaning to teach myself how to do data cleaning. 
+-- All the credit of this specific DataCleaning goes toward Alex The Analyst on Youtube, I just follow along with his data cleaning to teach myself how to do data cleaning. 
 -- Here is the link for the video if you want to see: https://www.youtube.com/watch?v=8rO7ztF4NtU&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=6
 -- I have PRACTICED everything in this Data Cleaning Work.
 
