@@ -136,7 +136,7 @@ FROM Cleaned_Project_Table;
 ----------------------------------------Data Exploration Query--------------------------------------------------------
 -- 1. Most popular/common Platform, Language, and Database total usage count for employed analyst worldwide
 
---PlatformHaveWorkedWith:
+--Platform_Popularity_Count:
 WITH Employed_Analyst_Table as(
 	SELECT *
 	FROM Background_Table
@@ -147,6 +147,7 @@ WITH Employed_Analyst_Table as(
 		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
 		  AND Devtype LIKE '%analyst%'
+		  AND PlatformHaveWorkedWith <> 'NA'
 	),
 PlatformSplits as (
 	SELECT ResponseID, value as PlatformSplits
@@ -155,11 +156,10 @@ PlatformSplits as (
 	)
 SELECT PlatformSplits, count(PlatformSplits) as Platform_Counts
 FROM PlatformSplits
-WHERE PlatformSplits != 'NA'
 GROUP BY PlatformSplits
-ORDER BY 2 DESC;
+ORDER BY Platform_Counts DESC;
 
---LanguageHaveWorkedWith
+--Language_Popularity_Count
 WITH Employed_Analyst_Table as(
 	SELECT *
 	FROM Background_Table
@@ -170,6 +170,7 @@ WITH Employed_Analyst_Table as(
 		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
 		  AND Devtype LIKE '%analyst%'
+		  AND LanguageHaveWorkedWith <> 'NA'
 	),
 LanguageSplits as (
 	SELECT ResponseID, value as LanguageSplits
@@ -178,11 +179,10 @@ LanguageSplits as (
 	)
 SELECT LanguageSplits, count(LanguageSplits) as Language_Counts
 FROM LanguageSplits
-WHERE LanguageSplits != 'NA'
 GROUP BY LanguageSplits
-ORDER BY 2 DESC;
+ORDER BY Language_Counts DESC;
 
---DatabaseHaveWorkedWith
+--Database_Popularity_Count
 WITH Employed_Analyst_Table as(
 	SELECT *
 	FROM Background_Table
@@ -193,6 +193,7 @@ WITH Employed_Analyst_Table as(
 		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
 		  AND Devtype LIKE '%analyst%'
+		  AND DatabaseHaveWorkedWith <> 'NA'
 	),
 DatabaseSplits as (
 	SELECT ResponseID, value as DatabaseSplits
@@ -201,112 +202,124 @@ DatabaseSplits as (
 	)
 SELECT DatabaseSplits, count(DatabaseSplits) as Database_Counts
 FROM DatabaseSplits
-WHERE DatabaseSplits != 'NA'
 GROUP BY DatabaseSplits
-ORDER BY 2 DESC;
+ORDER BY Database_Counts DESC;
 
--- 2. Analyst employment rate per country with less than 2 year of coding experience (any coding education also counts toward coding experience). Is it better if I set the sample size for each country to be at least 100?
+-- 2. Analyst employment rate per country with less than 2 year of coding experience (any coding education also counts toward coding experience).
 -- Reason for why I divide by the total amount of people who are analyst is because I'm not competing against people from different careers such as developers and engineers for an analyst spot.
-SELECT country,
+-- To increase data accuracy, I add a fliter condition where there has to be at least 100 rows per country whose job is analyst and employment status can't be null. If less than 100 rows, it won't be included in the result. 
+-- This is to avoid certain countries with extremely small sample size, since the results are not significant and they can skew the overall trend.
+SELECT
+	Country,
 	ROUND((COUNT(
 	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
 		  AND employment NOT LIKE '%independent contractor%'
-		  AND employment <> 'NA'
 		  AND YearsCode < 2
-		  AND Devtype LIKE '%analyst%'
 	THEN employment END)
 	/
-	CAST(count(CASE WHEN Devtype LIKE '%analyst%' THEN employment END) AS FLOAT)),2) as candidate_success_rate
-FROM Background_Table
-WHERE country != 'NA'
-AND DevType LIKE '%analyst%'
-GROUP BY Country
-ORDER BY 2 DESC;
-
--- To increase data accuracy, I add a fliter condition where there has to be at least 100 people whose job is analyst and employment status can't be null in order to be included in the result. 
--- This is to avoid certain countries with extremely small sample size.
-WITH row_num as(
-	SELECT *, row_number () over (partition by country order by country) as row_num
-	FROM Background_Table
-	WHERE Devtype LIKE '%analyst%'
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		Country, 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table 
+	WHERE Devtype LIKE '%analyst%' 
 	AND employment <> 'NA'
-	)
-SELECT country,
-	ROUND((COUNT(
-	CASE WHEN employment LIKE '%employed%' 
-		  AND employment NOT LIKE '%not employed%' 
-		  AND employment NOT LIKE '%retired%'
-		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment NOT LIKE '%independent contractor%'
-		  AND YearsCode < 2
-	THEN employment END)
-	/
-	CAST(count(CASE WHEN Devtype LIKE '%analyst%' THEN employment END) AS FLOAT)),2) as candidate_success_rate
-FROM row_num
-WHERE country != 'NA'
-AND row_num >= 100
+	AND Country <> 'NA'
+	) as flitered_table
 GROUP BY Country
-ORDER BY 2 DESC;
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+ORDER BY candidate_success_rate DESC
 
-
--- 3. Percentage of data analyst employment rate per education level.
-SELECT Edlevel,
+-- 3. Analyst employment rate per education level.
+-- I will account for the case where there has to be at least 100 rows per education whose current job is analyst and employment status can't be null, making sure the result is significant.
+SELECT
+	Edlevel,
 	ROUND((COUNT(
 	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
 		  AND employment NOT LIKE '%independent contractor%'
-		  AND employment NOT LIKE 'NA'
-		  AND Devtype LIKE '%analyst%'
+		  AND YearsCode < 2
 	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)),2) as candidate_success_rate
-FROM Background_Table
-WHERE Edlevel != 'NA'
-GROUP BY Edlevel
-ORDER BY candidate_success_rate DESC;
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		Edlevel, 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table 
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	AND EdLevel <> 'NA'
+	) as flitered_table
+GROUP BY EdLevel
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+ORDER BY candidate_success_rate DESC
 
-
--- 4. Percentage of data analyst employment rate per working model (remote/hybrid/in-person) with less than 2 year of coding experience.
-SELECT RemoteWork,
-	   ROUND((COUNT(
-	     CASE WHEN employment LIKE '%employed%' 
+-- 4. Analyst employment rate per working model (remote/hybrid/in-person) with less than 2 year of coding experience.
+-- I will account for the case where there has to be at least 100 rows per working model whose current job is analyst and employment status can't be null, making sure the result is significant.
+SELECT
+	RemoteWork,
+	ROUND((COUNT(
+	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment <> 'NA'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND YearsCode < 2
-		  AND Devtype LIKE '%analyst%'
-	       THEN employment 
-		     END)
+	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)) *100,2) as candidate_success_rate
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		RemoteWork, 
+		YearsCode, 
+		Employment,
+		DevType 
 	FROM Background_Table b
 	JOIN Company_Table c
-		ON b.ResponseId = c.ResponseId
-	WHERE RemoteWork <> 'NA'
-	GROUP BY RemoteWork
-	ORDER BY candidate_success_rate DESC;
+		ON b.ResponseID = c.ResponseID
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	AND RemoteWork <> 'NA'
+	) as flitered_table
+GROUP BY RemoteWork
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+ORDER BY candidate_success_rate DESC
 
--- 5. Percentage of data analyst global employment rate with less than 2 year of coding experience.
 
+-- 5. Analyst global employment rate with less than 2 year of coding experience.
 SELECT 
 	ROUND((COUNT(
 	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment <> 'NA'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND YearsCode < 2
 	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)) *100,2) as candidate_success_rate
-FROM Background_Table
-WHERE country != 'NA'
+	CAST(COUNT(*) AS FLOAT)) ,3) as candidate_success_rate
+FROM 
+	(SELECT 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table b
+	JOIN Company_Table c
+		ON b.ResponseID = c.ResponseID
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	) as flitered_table
 
 
 -- Creating View to store data for later visualizations
@@ -314,126 +327,193 @@ WHERE country != 'NA'
 --1. Platform_Popularity_Count
 CREATE VIEW Platform_Popularity_View as
 
-WITH Employed_Table as(
-	SELECT PlatformHaveWorkedWith, LanguageHaveWorkedWith, DatabaseHaveWorkedWith, Employment, Country
+WITH Employed_Analyst_Table as(
+	SELECT *
 	FROM Background_Table
 	WHERE employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
+		  AND Devtype LIKE '%analyst%'
+		  AND PlatformHaveWorkedWith <> 'NA'
 	),
 PlatformSplits as (
-	SELECT Country, value as PlatformSplits
-	FROM Employed_Table
+	SELECT ResponseID, value as PlatformSplits
+	FROM Employed_Analyst_Table
 	CROSS APPLY STRING_SPLIT (PlatformHaveWorkedWith, ';')
 	)
 SELECT PlatformSplits, count(PlatformSplits) as Platform_Counts
 FROM PlatformSplits
-WHERE PlatformSplits != 'NA'
 GROUP BY PlatformSplits
---ORDER BY 2 DESC;
+--ORDER BY Platform_Counts DESC;
 
 --2. Language_Popularity_Count
 CREATE VIEW Language_Popularity_View as
 
-WITH Employed_Table as(
-	SELECT PlatformHaveWorkedWith, LanguageHaveWorkedWith, DatabaseHaveWorkedWith, Employment, Country
+WITH Employed_Analyst_Table as(
+	SELECT *
 	FROM Background_Table
 	WHERE employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
+		  AND Devtype LIKE '%analyst%'
+		  AND LanguageHaveWorkedWith <> 'NA'
 	),
 LanguageSplits as (
-	SELECT Country, value as LanguageSplits
-	FROM Employed_Table
+	SELECT ResponseID, value as LanguageSplits
+	FROM Employed_Analyst_Table
 	CROSS APPLY STRING_SPLIT (LanguageHaveWorkedWith, ';')
 	)
-SELECT LanguageSplits, count(LanguageSplits) as Platform_Counts
+SELECT LanguageSplits, count(LanguageSplits) as Language_Counts
 FROM LanguageSplits
-WHERE LanguageSplits NOT IN ('NA', ' ', 'V', 'TypeS')
 GROUP BY LanguageSplits
---ORDER BY 2 DESC;
+--ORDER BY Language_Counts DESC;
+
 
 --3. Database_Popularity_Count
 CREATE VIEW Database_Popularity_View as
 
-WITH Employed_Table as(
-	SELECT PlatformHaveWorkedWith, LanguageHaveWorkedWith, DatabaseHaveWorkedWith, Employment, Country
+WITH Employed_Analyst_Table as(
+	SELECT *
 	FROM Background_Table
 	WHERE employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND employment <> 'NA'
+		  AND Devtype LIKE '%analyst%'
+		  AND DatabaseHaveWorkedWith <> 'NA'
 	),
 DatabaseSplits as (
-	SELECT Country, value as DatabaseSplits
-	FROM Employed_Table
+	SELECT ResponseID, value as DatabaseSplits
+	FROM Employed_Analyst_Table
 	CROSS APPLY STRING_SPLIT (DatabaseHaveWorkedWith, ';')
 	)
-SELECT DatabaseSplits, count(DatabaseSplits) as Platform_Counts
+SELECT DatabaseSplits, count(DatabaseSplits) as Database_Counts
 FROM DatabaseSplits
-WHERE DatabaseSplits != 'NA'
 GROUP BY DatabaseSplits
---ORDER BY 2 DESC;
+--ORDER BY Database_Counts DESC;
 
---4. Employment Rate per country with less than 2 years of coding experience.
+--4. Analyst Employment Rate per country with less than 2 years of coding experience.
 CREATE VIEW Employment_Success_Rate_Per_Country_View as
-SELECT country,
+
+SELECT
+	Country,
 	ROUND((COUNT(
 	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment <> 'NA'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND YearsCode < 2
 	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)) *100,2) as candidate_success_rate
-FROM Background_Table
-WHERE country != 'NA'
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		Country, 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table 
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	AND Country <> 'NA'
+	) as flitered_table
 GROUP BY Country
---ORDER BY 2 DESC;
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+--ORDER BY candidate_success_rate DESC
 
---5. Percentage of data analyst employment rate per education level.
+--5. Analyst Employment Rate per Education Level with less than 2 years of coding experience.
 CREATE VIEW Employment_Success_Rate_Per_Education_View as
 
-SELECT Edlevel,
+SELECT
+	Edlevel,
 	ROUND((COUNT(
 	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment NOT LIKE 'NA'
+		  AND employment NOT LIKE '%independent contractor%'
+		  AND YearsCode < 2
 	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)) *100,2) as candidate_success_rate
-FROM Background_Table
-WHERE Edlevel != 'NA'
-GROUP BY Edlevel
---ORDER BY candidate_success_rate DESC;
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		Edlevel, 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table 
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	AND EdLevel <> 'NA'
+	) as flitered_table
+GROUP BY EdLevel
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+--ORDER BY candidate_success_rate DESC
 
--- 6. Which working model (remote/hybrid/in-person) has the most success rate in getting hired by a company for an employed person with less than 2 years of coding experience?
+-- 6. Analyst Employment Rate per working model (remote/hybrid/in-person) with less than 2 years of coding experience. 
 CREATE VIEW Employment_Success_Rate_Per_Working_Model_View as
 
-SELECT RemoteWork,
-	   ROUND((COUNT(
-	     CASE WHEN employment LIKE '%employed%' 
+SELECT
+	RemoteWork,
+	ROUND((COUNT(
+	CASE WHEN employment LIKE '%employed%' 
 		  AND employment NOT LIKE '%not employed%' 
 		  AND employment NOT LIKE '%retired%'
 		  AND employment NOT LIKE 'I prefer not to say'
-		  AND employment <> 'NA'
+		  AND employment NOT LIKE '%independent contractor%'
 		  AND YearsCode < 2
-	       THEN employment 
-		     END)
+	THEN employment END)
 	/
-	CAST(COUNT(*) AS FLOAT)) *100,2) as candidate_success_rate
+	CAST(count(*) AS FLOAT)),3) as candidate_success_rate
+FROM 
+	(SELECT 
+		RemoteWork, 
+		YearsCode, 
+		Employment,
+		DevType 
 	FROM Background_Table b
 	JOIN Company_Table c
-		ON b.ResponseId = c.ResponseId
-	WHERE RemoteWork <> 'NA'
-	GROUP BY RemoteWork
-	--ORDER BY candidate_success_rate DESC;
+		ON b.ResponseID = c.ResponseID
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	AND RemoteWork <> 'NA'
+	) as flitered_table
+GROUP BY RemoteWork
+HAVING sum(CASE WHEN Devtype LIKE '%analyst%' THEN 1 ELSE 0 END) >= 100
+--ORDER BY candidate_success_rate DESC
+
+--7. Analyst global employment rate with less than 2 year of coding experience.
+CREATE VIEW Global_Employment_Success_Rate as
+
+SELECT 
+	ROUND((COUNT(
+	CASE WHEN employment LIKE '%employed%' 
+		  AND employment NOT LIKE '%not employed%' 
+		  AND employment NOT LIKE '%retired%'
+		  AND employment NOT LIKE 'I prefer not to say'
+		  AND employment NOT LIKE '%independent contractor%'
+		  AND YearsCode < 2
+	THEN employment END)
+	/
+	CAST(COUNT(*) AS FLOAT)) ,3) as candidate_success_rate
+FROM 
+	(SELECT 
+		YearsCode, 
+		Employment,
+		DevType 
+	FROM Background_Table b
+	JOIN Company_Table c
+		ON b.ResponseID = c.ResponseID
+	WHERE Devtype LIKE '%analyst%' 
+	AND employment <> 'NA'
+	) as flitered_table
