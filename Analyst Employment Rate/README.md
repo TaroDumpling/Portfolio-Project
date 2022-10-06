@@ -100,9 +100,9 @@ Visualization link can be found at the link at the bottom of this page.
 
 
 ## 🔗 Links
-[![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
-[![SQL Data Cleaning and Exploration Query](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql/)
-[![Summary in PDF](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf/)
-[![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
-[![Linkedin](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/)
+  [![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
+  [![SQL Data Cleaning and Exploration Query](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql/)
+  [![Summary in PDF](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf/)
+  [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
+  [![Linkedin](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/)
 
