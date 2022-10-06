@@ -22,7 +22,7 @@ This data contains 5,635,211 counts of data.
 Excel, SQL, Tableau
 
 
-## Summary
+## Summary [What actions can you take?]
 
 
 1. What skills to learn first? (List top 3 skills from most popular to least popular)
