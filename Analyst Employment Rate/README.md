@@ -98,7 +98,7 @@ Visualization link can be found at the the top of this page.
 3.  Use intense color to hightlight what you are trying to point out in Tableau, use lighter color for information that aren't important.
 4. Do not bombard people with information, only hightlight the main focus.
 
-**Lesson learned from doing this project from my own mistakes and advice from Senior Data Analyst on LinkedIn.**
+**Lesson learned from doing this project from my own mistakes.**
 
 1.	Before you remove the duplicate, use select statement to see what you’re deleting, once you confirmed that everything looks correct, then change it to delete statement.
 2.	Do not start query before you fully understand the dataset you are working with.
