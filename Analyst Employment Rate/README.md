@@ -76,7 +76,7 @@ Things I discovered were:
 5.	Analyst global employment rate with less than 2 year of coding experience.    
   
     
-                                                        Tableau Visualization 
+                                                   Tableau Visualization 
 Visualization link can be found at the link at the top of this page.
 
 
