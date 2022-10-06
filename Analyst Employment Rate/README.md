@@ -92,7 +92,7 @@ Visualization link can be found at the the top of this page.
 
 
                                                     What I Have Learned
-**Advice received from multiple Senior Data Analysts on my project:**
+**Advice received from multiple Senior Data Analysts on my project while networking on Linkedin:**
 1.	Perform data cleaning such as removing duplicates and populate null values first then break up the data set.
 2.	Minimize the use of CTE or subquery.
 3.  Use intense color to hightlight what you are trying to point out in Tableau, use lighter color for information that aren't important.
