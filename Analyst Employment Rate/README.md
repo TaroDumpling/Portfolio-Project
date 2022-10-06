@@ -67,7 +67,7 @@ Ex: Masterâ€™s to Master’s.
 
 
                                                     Data Exploration
-**Microsoft SQL Server:**  
+**Microsoft SQL Server:**      
     SQL Coding link is at the top of this page  
     Things I discovered were:
 1.	Most popular/common Platform, Language, and Database skill usage counts for an employed person as a data analyst worldwide.
