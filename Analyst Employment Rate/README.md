@@ -68,6 +68,7 @@ Ex: Masterâ€™s to Master’s.
 
                                                     Data Exploration
 **Microsoft SQL Server:**  
+    SQL Coding link is at the top of this page
 Things I discovered were:
 1.	Most popular/common Platform, Language, and Database skill usage counts for an employed person as a data analyst worldwide.
 2.	Analyst employment rate per country with less than 2 year of coding experience (any coding education also counts toward coding experience).
