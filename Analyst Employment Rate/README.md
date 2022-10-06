@@ -1,7 +1,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://imgur.com/a/KPmgwsc)
+!(https://imgur.com/a/KPmgwsc)
 
 
 # Factors of Data Analyst Applicants Employment Rate
