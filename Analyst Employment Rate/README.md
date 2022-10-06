@@ -77,7 +77,7 @@ Things I discovered were:
   
     
                                                    Tableau Visualization 
-Visualization link can be found at the link at the top of this page.
+Visualization link can be found at the the top of this page.
 
 
 
