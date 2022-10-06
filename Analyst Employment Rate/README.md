@@ -34,7 +34,7 @@ Excel, SQL, Tableau
 
                                                      Data Cleaning  
   **Excel:** 
-1.	Replaced 54080 corrupted punctuation (â€) with the correct punctuation (‘). 
+1.	Replaced 54,080 corrupted punctuation (â€) with the correct punctuation (‘). 
 Ex: Masterâ€™s to Master’s.
 2.	Exported as a workbook and imported into Microsoft SQL Server.
       
