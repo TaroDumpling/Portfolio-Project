@@ -1,6 +1,6 @@
 
 ## 🔗 Links
-  [![## Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
+  [![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
 
   [![SQL Data Cleaning and Exploration Query](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql/)
 
