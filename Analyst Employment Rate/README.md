@@ -25,7 +25,7 @@
 Excel, SQL, Tableau
 
 
-## Summary [What actions can you take?]
+## Summary [Actionable Insights from this analysis]
 
 
 1. What skills to learn first? (List top 3 skills from most popular to least popular)
