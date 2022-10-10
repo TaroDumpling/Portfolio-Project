@@ -1,5 +1,5 @@
 ![Screenshot_1](https://user-images.githubusercontent.com/107047989/194964385-3e3d99d6-c7af-46d1-b393-6a6f3689a918.png)
-  [![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
+  [![Click here to view in Tableau](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
 
 ## 🔗 Links
   [![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
