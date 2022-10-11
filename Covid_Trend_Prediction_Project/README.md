@@ -24,9 +24,6 @@ The dataset time frame selected from Feb 2020 - June 2022
 - As of June 2022, the death percentage is 1.18%.
 - Top 3 continent with the highest death count are Europe, North America, and Asia.
 
-## 🛠 Skills
-SQL, Tableau
-
 
 ## Actionable Insights
 
