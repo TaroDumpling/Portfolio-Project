@@ -1,3 +1,5 @@
+![Screenshot_1](https://user-images.githubusercontent.com/107047989/195132597-f0b0cfa7-1194-4da0-a787-75b8147a1d20.png)
+[![Click here to view Tableau Visualization in PDF (Download Recommended for Better Image)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main
 
 ## 🔗 Links
   
