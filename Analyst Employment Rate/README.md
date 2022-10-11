@@ -21,9 +21,6 @@
 - Solved a real job-hunting problem by providing meaningful employment insights for inexperienced analyst utilizing a large employment dataset with over 5 million counts of data
 -  Executed complex SQL queries that analyzed how a candidate employment rate were under the influence of skills, countries, working models, and coding experience.
 
-## 🛠 Skills
-Excel, SQL, Tableau
-
 
 ## Actionable Insights
 
@@ -38,7 +35,6 @@ Excel, SQL, Tableau
 - Not so much, you should focus on building your skills and experience because the results showed most employed analyst had lower education.
 4. Which working model has the highest employment rate with less than 2 years of coding experience? (List from highest to lowest)
 - In-person, Remote, Hybrid. This indicates that most companies still prefer in-person applicants for inexperienced analyst than Remote and Hybrid. You should apply for all the in-person jobs first, then apply for remote and hybrid positions to increase your chance of getting hired.
-
 
 
 
