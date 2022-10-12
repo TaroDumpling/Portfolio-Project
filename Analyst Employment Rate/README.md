@@ -52,7 +52,7 @@ Ex: Masterâ€™s to Master’s.
 
    
 **Microsoft SQL Server:**  
-       SQL Coding link is at the top of this page
+       SQL coding link is at the top of this page
 1.	Removed duplicates using row_number/window function.
 2.	Replaced NULL value with 0 for YearsCode column because there should be 0 to indicate a candidate without any experience in coding, but it only has NA, 1, 2, etc. Therefore, I assume NA means 0 years of experience, this will make SQL coding and visualization in Tableau easier.
 3.	I couldn’t populate any columns with NULL values because there wasn’t a reference point.
@@ -68,7 +68,7 @@ Ex: Masterâ€™s to Master’s.
 
                                                     Data Exploration
 **Microsoft SQL Server:**      
-        SQL Coding link is at the top of this page  
+        SQL coding link is at the top of this page  
     Things I discovered were:
 1.	Most popular/common Platform, Language, and Database skill usage counts for an employed person as a data analyst worldwide.
 2.	Analyst employment rate per country with less than 2 year of coding experience (any coding education also counts toward coding experience).
