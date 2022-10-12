@@ -18,7 +18,7 @@
   2. The survey was fielded from May 11, 2022 to June 1, 2022    
   3. This dataset is about an annual developer survey that examines all aspects of the developer experience from learning to code to their favorite technologies to version control and the workplace experience of professional developers (This dataset also includes other positions such as data scientist and analyst).    
   4. This data contains 5,635,211 counts of data.    
-- Solved a real job-hunting problem by providing meaningful employment insights for inexperienced analyst utilizing a large employment dataset with over 5 million counts of data
+- Solved a real job-hunting problem by providing actionable employment insights for inexperienced analyst utilizing a large employment dataset with over 5 million counts of data
 -  Executed complex SQL queries that analyzed how a candidate employment rate were under the influence of skills, countries, working models, and coding experience.
 
 
