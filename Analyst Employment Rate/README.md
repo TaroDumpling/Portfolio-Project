@@ -10,7 +10,7 @@
 
   [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
   
-  [![Linkedin Page](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/)
+  [![Linkedin Page](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/in/haomingchen1998/)
 
 
 # Overview: Factors of Data Analyst Applicants Employment Rate
