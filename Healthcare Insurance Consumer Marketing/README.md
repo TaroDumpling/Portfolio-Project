@@ -19,8 +19,5 @@ matplotlib.
 consumer profiles which increased the effectiveness and efficiency of advertising campaigns.
 ## Screenshots
 
-![App Screenshot](https://imgur.com/a/Ml7NSrC)
-
-
-![Logo](https://imgur.com/a/Ml7NSrC)
+![App Screenshot]([https://imgur.com/a/Ml7NSrC](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Python_Gas%20Price%20Web%20Scraping%20Automation/Gas%20Price%20Web%20Scraping%20Automation.py))
 
