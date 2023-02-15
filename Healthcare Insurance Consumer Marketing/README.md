@@ -20,5 +20,5 @@ consumer profiles which increased the effectiveness and efficiency of advertisin
 ## Screenshots
 
 ![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)
-(https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)
 
