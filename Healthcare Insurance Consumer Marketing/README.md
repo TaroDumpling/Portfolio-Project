@@ -3,7 +3,7 @@
   
 
   
- [![Python Code and Visualizations](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Data%20Cleaning%20%2B%20Correlation%20for%20target%20customer%20profile.ipynb)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Data%20Cleaning%20%2B%20Correlation%20for%20target%20customer%20profile.ipynb)
+  [![Python Code and Visualization](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Code%20and%20Visualizations%20for%20Data%20Cleaning%20%2B%20Correlation.ipynb)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Code%20and%20Visualizations%20for%20Data%20Cleaning%20%2B%20Correlation.ipynb/)
 
   [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
   
