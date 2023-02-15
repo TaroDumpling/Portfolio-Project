@@ -11,7 +11,7 @@
 
 # Overview
 Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
-This dataset contains information about 7 features and the actual medical charges incurred by over 1300 customers within ACME Insurance Inc. The age column from this dataset is from 18-64, so assuming no Medicare plans.
+- This dataset contains information about 7 features and the actual medical charges incurred by over 1300 customers within ACME Insurance Inc. The age column from this dataset is from 18-64, so assuming no Medicare plans.
 - The purpose of this project is to visualize the profile for most valuable customers for ACME Insurance Inc.
 - Visualized correlation between various consumer profiles in respect to revenue using pandas, seaborn, numpy, and
 matplotlib.
