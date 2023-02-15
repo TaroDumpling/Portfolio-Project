@@ -10,7 +10,7 @@
   [![Linkedin Page](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/in/haomingchen1998/)
 
 # Overview
-Source from [(https://www.kaggle.com/datasets/fibonamew/insurance-data)]
+Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 - Created Python code using BeautifulSoup that automated the web scrapping and Excel data recording processes for daily gas price fluctuation which eliminated 100% of human data entry.
 - It records different type of gases such as regular, mid grade, premium, diesel, and e85.
 - This code runs once every 24 hours as long as the Jupyter Notebook is still running in the background.
