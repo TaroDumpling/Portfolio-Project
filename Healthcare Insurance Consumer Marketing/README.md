@@ -19,5 +19,6 @@ matplotlib.
 consumer profiles which increased the effectiveness and efficiency of advertising campaigns.
 ## Screenshots
 
-![App Screenshot](((https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Data%20Cleaning%20%2B%20Correlation%20for%20target%20customer%20profile.ipynb)))
+![App Screenshot](((https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)))
+(((https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)))
 
