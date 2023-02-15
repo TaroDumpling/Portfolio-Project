@@ -16,8 +16,6 @@ Source from https://gasprices.aaa.com/?state=US
 - This code runs once every 24 hours as long as the Jupyter Notebook is still running in the background.
 ## Screenshots
 
-![App Screenshot](https://imgur.com/a/Ml7NSrC)
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Python_Gas%20Price%20Web%20Scraping%20Automation/Sample.jpg)
 
-
-![Logo](https://imgur.com/a/Ml7NSrC)
 
