@@ -9,11 +9,14 @@
   
   [![Linkedin Page](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/in/haomingchen1998/)
 
-# Overview
+# Overview: In Process
 Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
-- Created Python code using BeautifulSoup that automated the web scrapping and Excel data recording processes for daily gas price fluctuation which eliminated 100% of human data entry.
-- It records different type of gases such as regular, mid grade, premium, diesel, and e85.
-- This code runs once every 24 hours as long as the Jupyter Notebook is still running in the background.
+- Visualized correlation between various consumer profiles in respect to revenue using pandas, seaborn, numpy, and
+matplotlib.
+- Discovered the 2 most correlated consumer features in respect to the company's revenue are smoking status with
+79% correlation and age with 30% correlation.
+- Executed advance SQL queries and developed concise Tableau visualizations that showed the most profitable
+consumer profiles which increased the effectiveness and efficiency of advertising campaigns.
 ## Screenshots
 
 ![App Screenshot](https://imgur.com/a/Ml7NSrC)
