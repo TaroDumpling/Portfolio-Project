@@ -23,7 +23,8 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 - Discovered the 2 most correlated consumer features in respect to the company's revenue are smoking status with
 79% correlation and age with 30% correlation.
 - Executed advance SQL queries and developed concise Tableau visualizations that showed the most profitable
-consumer profiles which will increase the effectiveness and efficiency of advertising campaigns. Ex: Are smoker consumers more profitable than non-smoker consumers? Are senior consumers more profitable than adolescent consumers? (In process)
+consumer profiles which will increase the effectiveness and efficiency of advertising campaigns.
+- Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward smoker if the goal is to maximize revenue.
 
 ## Screenshots
 
