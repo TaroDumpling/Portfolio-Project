@@ -7,6 +7,8 @@
 
   [![Marketing Consumer Profile Analysis in SQL](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql/)
 
+  [![Raw Dataset used for this project]([https://www.linkedin.com/in/haomingchen1998/](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/expenses.csv))]([expenses.csv](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/expenses.csv))
+
   [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
   
   [![Linkedin Page](https://www.linkedin.com/in/haomingchen1998/)](https://www.linkedin.com/in/haomingchen1998/)
