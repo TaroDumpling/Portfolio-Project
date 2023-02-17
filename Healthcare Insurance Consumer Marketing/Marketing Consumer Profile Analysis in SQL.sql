@@ -21,7 +21,7 @@ END)
 SELECT
 (AVG(CASE WHEN age >30 AND age <=64 THEN charges END)
 /
-AVG(CASE WHEN age >= 18 AND age <=30 THEN charges END))*100-100
+AVG(CASE WHEN age >= 18 AND age <=30 THEN charges END)-1)*100
 FROM expense
 
 
@@ -37,7 +37,7 @@ GROUP BY smoker
 SELECT
 (AVG(CASE WHEN smoker = 'yes' THEN charges END)
 /
-AVG(CASE WHEN smoker = 'no' THEN charges END))*100-100
+AVG(CASE WHEN smoker = 'no' THEN charges END)-1)*100
 FROM expense
 
 -- The total amount of the company's adult customers = 444
