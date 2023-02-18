@@ -7,7 +7,7 @@
   
    [![Tableau: Target Consumer Profile Visualizations](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)
 
-  [![Marketing Consumer Profile Analysis in SQL](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql/)
+  [![SQL: Marketing Consumer Profile Analysis](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql/)
 
   [![Raw Dataset used for this project](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/expenses.csv)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/expenses.csv)
 
