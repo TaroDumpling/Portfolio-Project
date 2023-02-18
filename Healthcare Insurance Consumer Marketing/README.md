@@ -29,6 +29,12 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 consumer profiles which will increase the effectiveness and efficiency of advertising campaigns.
 - Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward middle age smoker if the goal is to maximize revenue.
 
+# Procedure for this project
+1. Cleaned the data using Python. Although the data is already cleaned, but I still show how to code if I need to clean this data.
+2. Visualized the more correlated consumer features to revenue using Python.
+3. SQL exloration queries to find out actionable insights.
+4. Visualized the insights in Tableau.
+
 # Lesson Learned from this Project
 - Only use one matrix so it doesn't confuse people. Ex: if you use percentage, then don't use ratio.
 - Use charge per person instead of total charge, so the sample size won't be a problem when you are comparing two things.
