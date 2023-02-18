@@ -35,6 +35,12 @@ consumer profiles which will increase the effectiveness and efficiency of advert
 - How to find the most correlated consumer features using Python.
 - Use pie chart when you are only comparing two things, bar chart will take more space and look empty.
 
+# Lesson Learned from people I present my project to
+- Use one matrix/normalization, it means comparing apples to apples.
+- Segmentation/grouping (age group, sex).
+- Add a column with unique identifier if this dataset doesn't already have one.
+- Correlation does not necessarily indicate causation.
+
 ## Screenshots
 
 ![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)
