@@ -31,8 +31,8 @@ consumer profiles which will increase the effectiveness and efficiency of advert
 
 # Procedure for this project
 1. Cleaned the data using Python. Although the data is already cleaned, but I still show how to code if I need to clean this data.
-2. Visualized the more correlated consumer features to revenue using Python.
-3. SQL exloration queries to find out actionable insights.
+2. Visualized the most correlated consumer features to revenue using Python.
+3. Found out actionable insights using SQL.
 4. Visualized the insights in Tableau.
 
 # Lesson Learned from this Project
