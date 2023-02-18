@@ -6,7 +6,7 @@ ORDER BY age
 -- The revenue per customer for middle age group = $15,193
 -- The revenue per customer for adult group = $9,397
 SELECT
-avg(charges) as revenue per customer,
+avg(charges) as revenue_per_customer,
 (CASE
 WHEN age >= 18 AND age <=30 THEN 'adult'
 WHEN age >30 AND age <=64 THEN 'middle_age'
@@ -28,7 +28,7 @@ FROM expense
 -- The revenue per customer for smoker = $32,050
 -- The revenue per customer for non-smoker = $8,434
 SELECT
-avg(charges) as revenue per customer,
+avg(charges) as revenue_per_customer,
 smoker
 FROM expense
 GROUP BY smoker
