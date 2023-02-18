@@ -23,11 +23,8 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 - The metric measured is the average charge per customer, higher charge indicate more revenue. Using this metric is to account for the uneven number of total customers when I compare customer profiles.
 
 # Actionable Insights
-- Discovered the 2 most correlated consumer features in respect to the company's revenue are smoking status with
-79% correlation and age with 30% correlation.
-- Executed advance SQL queries and developed concise Tableau visualizations that showed the most profitable
-consumer profiles which will increase the effectiveness and efficiency of advertising campaigns.
-- Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward middle age smoker if the goal is to maximize revenue.
+- Discovered the 2 most correlated consumer features in respect to the company's revenue are smoking status with 79% correlation and age with 30% correlation.
+- Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward middle-aged smoker to maximize revenue.
 
 # Procedure for this project
 1. Cleaned the data using Python. Although the data is already cleaned, but I still show how to code if I need to clean this data.
