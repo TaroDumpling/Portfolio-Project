@@ -27,7 +27,7 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 79% correlation and age with 30% correlation.
 - Executed advance SQL queries and developed concise Tableau visualizations that showed the most profitable
 consumer profiles which will increase the effectiveness and efficiency of advertising campaigns.
-- Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward smoker if the goal is to maximize revenue.
+- Concluded smoker group generated 280% higher revenue than non-smoker group and middle age group generated 62% higher revenue than adult age group. The company should shift its marketing focus toward middle age smoker if the goal is to maximize revenue.
 
 ## Screenshots
 
