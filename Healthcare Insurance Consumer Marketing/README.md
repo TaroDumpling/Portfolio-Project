@@ -34,6 +34,7 @@ consumer profiles which will increase the effectiveness and efficiency of advert
 - Use charge per person instead of total charge, so the sample size won't be a problem when you are comparing two things.
 - How to find the most correlated consumer features using Python.
 - Use pie chart when you are only comparing two things, bar chart will take more space and look empty.
+- I can use certain non-numeric consumer features for correlation as well.
 
 # Lesson Learned from people I present my project to
 - Use one matrix/normalization, it means comparing apples to apples.
