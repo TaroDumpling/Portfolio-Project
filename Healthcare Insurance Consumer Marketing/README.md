@@ -21,6 +21,7 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 - The purpose of this project is to visualize the most profitable consumer profiles for ACME Insurance Inc and increase the effectiveness and efficiency of advertising campaigns.
 - In my case, target consumer is defined as the group of consumer that generate maximum revenue (highest charge)
 - The metric measured is the average charge per customer, higher charge indicate more revenue. Using this metric is to account for the uneven number of total customers when I compare customer profiles.
+- Adult is defined as age between 18 to 30. Middle age is defined as age between 31-64. No data on anyone above 64, so no senior age group.
 
 # Actionable Insights
 - Discovered the 2 most correlated consumer features in respect to the company's revenue are smoking status with 79% correlation and age with 30% correlation.
