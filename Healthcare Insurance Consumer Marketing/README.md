@@ -5,7 +5,7 @@
   
   [![Python: Visualizations for Correlation and Data Cleaning Code](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Code%20and%20Visualizations%20for%20Data%20Cleaning%20%2B%20Correlation.ipynb)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Code%20and%20Visualizations%20for%20Data%20Cleaning%20%2B%20Correlation.ipynb/)
   
-   [![Tableau: Marketing Consumer Profile Visualizations](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)
+   [![Tableau: Visualizations for Marketing Consumer Profile](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/HealthcareInsuranceConsumerMarketing2/Dashboard1)
 
   [![SQL: Marketing Consumer Profile Analysis](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Marketing%20Consumer%20Profile%20Analysis%20in%20SQL.sql/)
 
