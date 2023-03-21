@@ -52,4 +52,4 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 
 ![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)
 ![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_4.png)
-![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_5.png)
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)
