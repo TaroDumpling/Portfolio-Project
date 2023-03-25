@@ -1,4 +1,9 @@
 
+## Screenshots
+
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_4.png)
+![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)
 
 
 ## 🔗 Links
@@ -47,9 +52,3 @@ Source from https://www.kaggle.com/datasets/fibonamew/insurance-data
 - Segmentation/grouping (age group, sex).
 - Add a column with unique identifier if this dataset doesn't already have one.
 - Correlation does not necessarily indicate causation.
-
-## Screenshots
-
-![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_1.png)
-![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_4.png)
-![App Screenshot](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Healthcare%20Insurance%20Consumer%20Marketing/Screenshot_2.png)
