@@ -1,11 +1,7 @@
 ![Screenshot_1](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/Dashboard%20Preview.png)
 
 ## 🔗 Links
-  [![Tableau Visualization](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
-
-  [![SQL Data Cleaning and Exploration Query](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Data_Analyst_Project.sql/)
-
-  [![Summary in PDF](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf)](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Analyst%20Employment%20Rate/Project%20Summary.pdf/)
+  [![Excel File that contains dashboard visulizations, analysis, raw data, cleaned data](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/marketing_conversion_channel_analysis_dashboard.xlsx)
 
   [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
   
@@ -13,27 +9,40 @@
 
 
 # Overview: Factors of Data Analyst Applicants Employment Rate
-1. Source from: https://insights.stackoverflow.com/survey  
-  2. The survey was fielded from May 11, 2022 to June 1, 2022    
-  3. This dataset is about an annual developer survey that examines all aspects of the developer experience from learning to code to their favorite technologies to version control and the workplace experience of professional developers (This dataset also includes other positions such as data scientist and analyst).    
-  4. This data contains 5,635,211 counts of data.    
-- Solved a real job-hunting problem by providing actionable employment insights for inexperienced analyst utilizing a large employment dataset with over 5 million counts of data
--  Executed advanced SQL queries that analyzed how a candidate employment rate were under the influence of skills, countries, working models, and coding experience.
+- Source from: https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign?select=marketing_campaign.xlsx
+- About Dataset: this dataset contains information about a marketing campaign including different consumer profiles, offer acceptance status, and different marketing channels.
+AcceptedCmp1 - 1 if customer accepted the offer in the 1st campaign, 0 otherwise
+AcceptedCmp2 - 1 if customer accepted the offer in the 2nd campaign, 0 otherwise
+AcceptedCmp3 - 1 if customer accepted the offer in the 3rd campaign, 0 otherwise
+AcceptedCmp4 - 1 if customer accepted the offer in the 4th campaign, 0 otherwise
+AcceptedCmp5 - 1 if customer accepted the offer in the 5th campaign, 0 otherwise
+Response (target) - 1 if customer accepted the offer in the last campaign, 0 otherwise
+Complain - 1 if customer complained in the last 2 years
+DtCustomer - date of customer’s enrolment with the company
+Education - customer’s level of education
+Marital - customer’s marital status
+Kidhome - number of small children in customer’s household
+Teenhome - number of teenagers in customer’s household
+Income - customer’s yearly household income
+MntFishProducts - amount spent on fish products in the last 2 years
+MntMeatProducts - amount spent on meat products in the last 2 years
+MntFruits - amount spent on fruits products in the last 2 years
+MntSweetProducts - amount spent on sweet products in the last 2 years
+MntWines - amount spent on wine products in the last 2 years
+MntGoldProds - amount spent on gold products in the last 2 years
+NumDealsPurchases - number of purchases made with discount
+NumCatalogPurchases - number of purchases made using catalogue
+NumStorePurchases - number of purchases made directly in stores
+NumWebPurchases - number of purchases made through company’s web site
+NumWebVisitsMonth - number of visits to company’s web site in the last month
+Recency - number of days since the last purchase
+
 
 
 ## Actionable Insights
 
 
-1. What skills to learn first? (List top 3 skills from most popular to least popular)
-- Database: Microsoft SQL Server, MySQL, PostgreSQL
-- Platform: AWS, Microsoft Azure, Google Cloud
-- Programming Language: SQL, Python, JavaScript
-2. Which country has the highest employment rate for inexperienced analyst with less than 2 years of coding experience? Relocation should be considered if you aren’t getting any luck in your current location. (List from highest to lowest)
-- Brazil, India, United Kingdom, United States of America, Canada, Germany, Australia.
-3. Does education matters?
-- Not so much, you should focus on building your skills and experience because the results showed most employed analyst had lower education.
-4. Which working model has the highest employment rate with less than 2 years of coding experience? (List from highest to lowest)
-- In-person, Remote, Hybrid. This indicates that most companies still prefer in-person applicants for inexperienced analyst than Remote and Hybrid. You should apply for all the in-person jobs first, then apply for remote and hybrid positions to increase your chance of getting hired.
+Campaign 3 had the highest percentage of purchases in both the Store and Deal channel. This suggests that customers were more inclined to make purchases through these channels during Campaign 3 compared to the other campaigns, indicating the effectiveness of these channels in driving customer engagement and potential conversions. Therefore, to recreate the success of Campaign 3, focusing on both the Store and Web channels would be advisable.
 
 
 
