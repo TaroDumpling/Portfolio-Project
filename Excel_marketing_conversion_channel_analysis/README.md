@@ -9,6 +9,7 @@
 
 
 # Overview: Purpose of this Project and the dataset used
+- The purpose is to identify the most successful marketing campaign and find out what contribute to the success of that campaign, so the same success can be re-created in the future.
 - Source from: https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign?select=marketing_campaign.xlsx
 - About Dataset: this dataset contains information about a marketing campaign including different consumer profiles, offer acceptance status, and different marketing channels.<br />
 AcceptedCmp1 - 1 if customer accepted the offer in the 1st campaign, 0 otherwise<br />
@@ -50,69 +51,20 @@ Campaign 3 had the highest percentage of purchases in both the Store and Deal ch
 
                                                      Data Cleaning  
   **Excel:** 
-1.	Replaced 54080 corrupted punctuation (â€) with the correct punctuation (‘). 
-Ex: Masterâ€™s to Master’s.
-2.	Exported as a workbook and imported into Microsoft SQL Server.
+1.	Removed duplicates.
+2.	No Null Values found.
+3.	Standardize capitalization
+4.	Remove unnecessary blank space.<br />
       
-        
-         
-
-
-   
-**Microsoft SQL Server:**  
-       SQL coding link is at the top of this page
-1.	Removed duplicates using row_number/window function.
-2.	Replaced NULL value with 0 for YearsCode column because there should be 0 to indicate a candidate without any experience in coding, but it only has NA, 1, 2, etc. Therefore, I assume NA means 0 years of experience, this will make SQL coding and visualization in Tableau easier.
-3.	I couldn’t populate any columns with NULL values because there wasn’t a reference point.
-4.	Created two new tables: a Company_Table and a Background_Table, from the cleaned dataset. Response ID is kept for each table, so join function could be used after.
--	Company_Table has columns such as Response ID as the primary key, organization size, RemoteWork (working model), total compensation, compensation frequency.
--	Background_Table has columns such as Response ID as the primary key, education level, country, DevType (current job name), employment status, database have worked with, age, gender, sex, etc.
-
-
-
-
 
 
 
                                                     Data Exploration
-**Microsoft SQL Server:**      
-        SQL coding link is at the top of this page  
-    Things I discovered were:
-1.	Most popular/common Platform, Language, and Database skill usage counts for an employed person as a data analyst worldwide.
-2.	Analyst employment rate per country with less than 2 year of coding experience (any coding education also counts toward coding experience).
-3.	Analyst employment rate per education level.
-4.	Analyst employment rate per working model (remote/hybrid/in-person) with less than 2 year of coding experience.
-5.	Analyst global employment rate with less than 2 year of coding experience.    
+1. Calculated conversion rate in percentage by each marketing campaign (customer who accepted the offer after the campaign/ total customers from that campaign)*100
+2. Calculated percentage of total purchases for each channel (customer who accepted the offer after the campaign from a specific channel / total customers from that campaign from a specific channel)*100
   
     
                                                    Tableau Visualization 
-Visualization link can be found at the the top of this page.
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                    What I Have Learned
-**Advice received from multiple Senior Data Analysts on my project while networking on Linkedin:**
-1.	Perform data cleaning such as removing duplicates and populate null values first then break up the data set.
-2.	Minimize the use of CTE or subquery.
-3.  Use intense color to hightlight what you are trying to point out in Tableau, use lighter color for information that aren't important.
-4. Do not bombard people with information, only hightlight the main focus.
-
-**Lesson learned from doing this project from my own mistakes:**
-
-1.	Before you remove the duplicate, use select statement to see what you’re deleting, once you confirmed that everything looks correct, then change it to delete statement.
-2.	Do not start query before you fully understand the dataset you are working with.
-3.	Although I can remove duplicates much easier in Excel, but when the dataset becomes too large, Excel might crash while removing the duplicates, so SQL is better in terms of handling larger dataset.
-4.	When I want to see the employment rate per country, I need to exclude countries where the sample size is small. Because the results won’t be significant, and they can skew the overall trend.
-5.	Before importing to Tableau, make sure to replace all the NULL values with 0 because it could mistake that with a string.
+1. Visualized the highest conversion rate with darker color to highlight key insights, and used lighter color to downplay less important details, such as unsuccessful campaigns.
 
 
