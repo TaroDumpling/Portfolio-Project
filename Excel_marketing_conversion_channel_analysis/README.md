@@ -1,4 +1,4 @@
-![Screenshot_1]([https://user-images.githubusercontent.com/107047989/194964385-3e3d99d6-c7af-46d1-b393-6a6f3689a918.png](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/Dashboard%20Preview.png))
+![Screenshot_1]([[https://user-images.githubusercontent.com/107047989/194964385-3e3d99d6-c7af-46d1-b393-6a6f3689a918.png](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/Dashboard%20Preview.png](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/Dashboard%20Preview.png)))
   [![Click here to view Visualization in Tableau](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)](https://public.tableau.com/app/profile/haoming.chen1867/viz/FactorsofDataAnalystApplicantsEmploymentRate__/Dashboard1)
 
 ## 🔗 Links
