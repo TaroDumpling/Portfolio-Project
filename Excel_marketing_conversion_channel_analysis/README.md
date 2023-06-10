@@ -53,8 +53,8 @@ Campaign 3 had the highest percentage of purchases in both the Store and Deal ch
   **Excel:** 
 1.	Removed duplicates.
 2.	No Null Values found.
-3.	Standardize capitalization
-4.	Remove unnecessary blank space.<br />
+3.	Standardized capitalization
+4.	Removed unnecessary blank space.<br />
       
 
 
