@@ -1,7 +1,7 @@
 ![Screenshot_1](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/Dashboard%20Preview.png)
 
 ## 🔗 Links
-  [Excel File that contains dashboard visulizations, analysis, raw data, cleaned data](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/marketing_conversion_channel_analysis_dashboard.xlsx)
+  [Excel .xlsx File that contains dashboard visulizations, analysis, raw data, cleaned data](https://github.com/HaomingChen1998/Portfolio-Project/blob/main/Excel_marketing_conversion_channel_analysis/marketing_conversion_channel_analysis_dashboard.xlsx)
 
   [![Other Project](https://github.com/HaomingChen1998/Portfolio-Project)](https://github.com/HaomingChen1998/Portfolio-Project/)
   
