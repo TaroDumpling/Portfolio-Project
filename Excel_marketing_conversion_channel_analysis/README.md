@@ -62,6 +62,7 @@ Campaign 3 had the highest percentage of purchases in both the Store and Deal ch
                                                     Data Exploration
 1. Calculated conversion rate in percentage by each marketing campaign (customer who accepted the offer after the campaign/ total customers from that campaign)*100
 2. Calculated percentage of total purchases for each channel (customer who accepted the offer after the campaign from a specific channel / total customers from that campaign from a specific channel)*100
+3. Functions used AVERAGEIF, COUNTA, COUNTIF
   
     
                                                    Tableau Visualization 
